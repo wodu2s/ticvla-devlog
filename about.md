@@ -10,7 +10,7 @@ description: TIC-VLA 모델을 SerBot II에 온보드로 올리는 프로젝트�
   <p class="post-summary">Vision-Language-Action 모델을 저사양 온보드 하드웨어에서 실제로 굴리는 것이 목표입니다.</p>
 </header>
 
-<div class="post-body">
+<div class="post-body" markdown="1">
 
 ## 무엇을 하는 프로젝트인가
 
