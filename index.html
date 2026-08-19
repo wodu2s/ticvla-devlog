@@ -26,9 +26,15 @@ layout: default
   </div>
 </section>
 
+<div class="search">
+  <input type="search" id="q" placeholder="글 내용 검색 (예: 데드존, 좌표계, 480ms)" autocomplete="off">
+  <p class="search-hint" id="search-hint"></p>
+</div>
+<ul class="entries" id="results" hidden></ul>
+
 <p class="list-head">개발 일지</p>
 
-<ul class="entries">
+<ul class="entries" id="all">
 {% for post in site.posts %}
   <li class="entry">
     <a href="{{ post.url | relative_url }}">
@@ -42,3 +48,85 @@ layout: default
   </li>
 {% endfor %}
 </ul>
+
+<script>
+(function () {
+  const q       = document.getElementById('q');
+  const all     = document.getElementById('all');
+  const results = document.getElementById('results');
+  const hint    = document.getElementById('search-hint');
+  const SRC     = '{{ "/search.json" | relative_url }}';
+
+  let posts = null;
+
+  function esc(s) {
+    return s.replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[c]));
+  }
+
+  // 매칭 지점 주변을 잘라내고 검색어를 강조한다
+  function snippet(text, needle) {
+    const i = text.toLowerCase().indexOf(needle);
+    if (i < 0) return '';
+    const from = Math.max(0, i - 60);
+    const to   = Math.min(text.length, i + needle.length + 90);
+    const head = from > 0 ? '… ' : '';
+    const tail = to < text.length ? ' …' : '';
+    const cut  = text.slice(from, to);
+    const j    = cut.toLowerCase().indexOf(needle);
+    return head
+      + esc(cut.slice(0, j))
+      + '<mark>' + esc(cut.slice(j, j + needle.length)) + '</mark>'
+      + esc(cut.slice(j + needle.length))
+      + tail;
+  }
+
+  function render(list, needle) {
+    results.innerHTML = list.map(p => {
+      const where = [];
+      if (p.title.toLowerCase().includes(needle))   where.push('제목');
+      if (p.summary.toLowerCase().includes(needle)) where.push('요약');
+      if (p.tags.toLowerCase().includes(needle))    where.push('태그');
+      const body = snippet(p.content, needle);
+      if (body) where.push('본문');
+      return `<li class="entry">
+        <a href="${p.url}">
+          <span class="date">${p.date}</span>
+          <h2>${esc(p.title)}</h2>
+          <p>${body || esc(p.summary)}</p>
+        </a>
+        <p class="tags"><span class="tag">${where.join(' · ')}</span></p>
+      </li>`;
+    }).join('');
+  }
+
+  async function search() {
+    const needle = q.value.trim().toLowerCase();
+
+    if (!needle) {
+      all.hidden = false;
+      results.hidden = true;
+      hint.textContent = '';
+      return;
+    }
+
+    if (!posts) {
+      hint.textContent = '불러오는 중…';
+      posts = await (await fetch(SRC)).json();
+    }
+
+    const hits = posts.filter(p =>
+      (p.title + ' ' + p.summary + ' ' + p.tags + ' ' + p.content)
+        .toLowerCase().includes(needle)
+    );
+
+    all.hidden = true;
+    results.hidden = false;
+    hint.textContent = hits.length ? `${hits.length}편` : '검색 결과 없음';
+    render(hits, needle);
+  }
+
+  q.addEventListener('input', search);
+})();
+</script>
