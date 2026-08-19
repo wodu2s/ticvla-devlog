@@ -10,7 +10,7 @@ description: TIC-VLA on SerBot II 프로젝트의 진행 중인 작업 목록.
   <p class="post-summary">진행 중인 작업과 끝낸 작업. 단계 번호는 작업 단위이며 순서를 뜻하지 않습니다.</p>
 </header>
 
-<div class="post-body">
+<div class="post-body" markdown="1">
 
 <div class="todo-meta">
 마지막 갱신 2026-08-19 · 현재 단계 <strong>2단계 — 데이터 수집</strong>
