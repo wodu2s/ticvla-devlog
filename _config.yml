@@ -1,0 +1,36 @@
+title: "TIC-VLA on SerBot II"
+tagline: "Vision-Language-Action 모델을 실제 로봇에 올리는 기록"
+description: "TIC-VLA 논문 모델을 SerBot II 3륜 옴니 로봇에 온보드로 올려 보행자 회피 주행을 구현한 개발 일지."
+author: "정재연"
+affiliation: "강남대학교 공과대학"
+
+url: "https://wodu2s.github.io"
+baseurl: "/ticvla-devlog"
+
+repository_url: "https://github.com/ucla-mobility/TIC-VLA"
+
+permalink: /posts/:title/
+timezone: Asia/Seoul
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

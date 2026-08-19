@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-head">
+    <p class="post-date">{{ page.date | date: "%Y년 %-m월 %-d일" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="post-summary">{{ page.summary }}</p>{% endif %}
+    {% if page.tags.size > 0 %}
+    <p class="tags">{% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>
+
+<nav class="post-nav">
+  {% if page.previous %}<a class="prev" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>{% endif %}
+  {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>{% endif %}
+</nav>
