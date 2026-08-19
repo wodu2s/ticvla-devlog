@@ -10,16 +10,18 @@ layout: default
   <ul class="metrics">
     <li class="metric"><span class="n">1.8&nbsp;GB</span><span class="k">InternVL3-1B 온보드</span></li>
     <li class="metric"><span class="n">11.9&nbsp;ms</span><span class="k">Action Expert 추론</span></li>
+    <li class="metric"><span class="n">480&nbsp;ms</span><span class="k">빠른 루프 실측 주기</span></li>
     <li class="metric"><span class="n">23.4&nbsp;s</span><span class="k">VLM 재해석 주기</span></li>
     <li class="metric"><span class="n">6/6</span><span class="k">안전 관문 테스트</span></li>
   </ul>
 
   <div class="status">
-    <strong>현재 상태 — 목표 객체 도달 학습 준비</strong>
+    <strong>현재 상태 — 목표 객체 도달, 데이터 수집 준비</strong>
     <ul>
       <li>보행자 회피 주행은 실차에서 3단계(인식 · 회피 · 정지) 전부 동작</li>
-      <li>다음 목표는 "저 물체까지 가라" — 지시문 A/B로 제로샷 기준선을 측정했다</li>
-      <li>확인된 것: VLM은 접근을 서술하지만 궤적은 회피한다. 고칠 곳은 Action Expert</li>
+      <li>목표 접근은 아직 안 된다 — 물체가 있는 쪽의 <strong>반대로</strong> 간다. 좌우 모두 부호가 뒤집혀 있다</li>
+      <li>빠른 루프 실측 480ms(약 2Hz). 안전 관문 타임아웃 0.5초와 충돌하고, 느린 루프가 굶어 74초 동안 장면 해석이 한 번뿐이었다</li>
+      <li>다음: 조종 시연 데이터 수집 → Action Head 파인튜닝</li>
     </ul>
   </div>
 </section>
