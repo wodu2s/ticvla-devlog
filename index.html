@@ -3,24 +3,24 @@ layout: default
 ---
 
 <section class="intro">
-  <h1>Vision-Language-Action 모델을<br>실제 로봇에 올리는 기록</h1>
-  <p>TIC-VLA 논문 모델을 SerBot II 3륜 옴니 로봇에 온보드로 얹고, 보행자를 피해 주행시키기까지의 개발 일지입니다.</p>
-  <p>추론 지연, 좌표계 검증, 안전 계층 설계, 실차 주행까지 — 잘 된 것과 틀렸던 가설을 함께 남깁니다.</p>
+  <h1>Vision-Language-Action 모델 위에<br>AI Agent를 얹는 기록</h1>
+  <p>TIC-VLA 논문 모델을 SerBot II 3륜 옴니 로봇에 온보드로 얹고, 그 위에 AI Agent를 올려 심부름을 자율 수행시키기까지의 개발 일지입니다.</p>
+  <p>추론 지연, 좌표계 검증, 안전 계층 설계, 실차 주행까지 — 잘 된 것과 틀렸던 가설을 함께 남깁니다. rule-based로도 되는 것과 AI Agent여야만 하는 것을 가르는 과정도 남깁니다.</p>
 
   <ul class="metrics">
     <li class="metric"><span class="n">1.8&nbsp;GB</span><span class="k">InternVL3-1B 온보드</span></li>
     <li class="metric"><span class="n">11.9&nbsp;ms</span><span class="k">Action Expert 추론</span></li>
     <li class="metric"><span class="n">480&nbsp;ms</span><span class="k">빠른 루프 실측 주기</span></li>
     <li class="metric"><span class="n">23.4&nbsp;s</span><span class="k">VLM 재해석 주기</span></li>
-    <li class="metric"><span class="n">6/6</span><span class="k">안전 관문 테스트</span></li>
+    <li class="metric"><span class="n">2층</span><span class="k">Agent 판단 + VLA 실행</span></li>
   </ul>
 
   <div class="status">
     <strong>현재 상태 — 심부름 태스크로 확장 중</strong>
     <ul>
-      <li>1단계 완료: 사람을 인식하고, 비껴 가고, 스스로 멈추는 3단계 실차 검증</li>
-      <li>2단계 진행: TIC-VLA 위에 AI Agent를 얹어 심부름(다목표 · 순서 판단 · 재계획) 수행</li>
-      <li>확인된 한계: 현재 모델은 바닥 평면 마킹과 색 속성을 서술하지 않는다 — 마커 설계와 학습 계획에 반영</li>
+      <li>1단계 완료: 인식·회피·정지 3단계 실차 검증, 안전 검증 4/4 통과</li>
+      <li>2단계 진행: TIC-VLA 위에 AI Agent — 다목표 이동 · 순서 판단 · 차단 시 재계획</li>
+      <li>확인된 한계: 현재 모델은 바닥 평면 마킹과 색 속성을 서술하지 않는다. 마커 설계와 학습 계획에 반영했다</li>
     </ul>
   </div>
 </section>
