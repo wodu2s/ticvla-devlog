@@ -1,13 +1,13 @@
 ---
 layout: default
 title: 데이터셋
-description: GoToObject-v1 — 목표 객체 도달 태스크의 조종 시연 데이터셋 구성과 수집 방법.
+description: GoToColorMarker-v1 — 목표 객체 도달 태스크의 조종 시연 데이터셋 구성과 수집 방법.
 permalink: /dataset/
 ---
 
 <article class="post">
 <header class="post-head">
-  <h1>GoToObject-v1</h1>
+  <h1>GoToColorMarker-v1</h1>
   <p class="post-summary">"저 물체까지 가서 멈춰라"를 가르치기 위한 조종 시연 데이터셋. 구성과 수집 방법.</p>
 </header>
 
