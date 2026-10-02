@@ -10,17 +10,19 @@ layout: default
   <ul class="metrics">
     <li class="metric"><span class="n">1.8&nbsp;GB</span><span class="k">InternVL3-1B 온보드</span></li>
     <li class="metric"><span class="n">11.9&nbsp;ms</span><span class="k">Action Expert 추론</span></li>
-    <li class="metric"><span class="n">480&nbsp;ms</span><span class="k">빠른 루프 실측 주기</span></li>
+    <li class="metric"><span class="n">72</span><span class="k">학습 데이터 에피소드</span></li>
+    <li class="metric"><span class="n">0.0364</span><span class="k">1차 학습 ADE (학습 전 0.1623)</span></li>
     <li class="metric"><span class="n">23.4&nbsp;s</span><span class="k">VLM 재해석 주기</span></li>
     <li class="metric"><span class="n">2층</span><span class="k">Agent 판단 + VLA 실행</span></li>
   </ul>
 
   <div class="status">
-    <strong>현재 상태 — 심부름 태스크로 확장 중</strong>
+    <strong>현재 상태 — 심부름 태스크 1차 학습 완료</strong>
     <ul>
-      <li>1단계 완료: 인식·회피·정지 3단계 실차 검증, 안전 검증 4/4 통과</li>
-      <li>2단계 진행: TIC-VLA 위에 AI Agent — 다목표 이동 · 순서 판단 · 차단 시 재계획</li>
-      <li>확인된 한계: 현재 모델은 바닥 평면 마킹과 색 속성을 서술하지 않는다. 마커 설계와 학습 계획에 반영했다</li>
+      <li>피벗 완료: 보행자 회피 데모 → 심부름 태스크</li>
+      <li>데이터셋 72 에피소드 수집 완료 (3배치 × 3색 × 8)</li>
+      <li>1차 학습(Action Expert only) 완료 — 궤적은 맞고 색은 틀림</li>
+      <li>다음: 색 조건이 궤적에 실리도록 손실/프롬프트 재설계</li>
     </ul>
   </div>
 </section>

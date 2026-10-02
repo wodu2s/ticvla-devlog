@@ -5,6 +5,11 @@ summary: "빨강·초록·파랑 마커를 구분하지 못했다. 채널 스왑
 tags: [VLM, grounding, 디버깅]
 ---
 
+<div class="callout">
+<span class="label">정정</span>
+이 글의 결론 — "모델이 색을 못 본다, 구조에 그 능력이 없다" — 은 <strong>09-28 재검증에서 뒤집혔다.</strong> 모델은 색을 보고 있었다. 남은 문제는 인식이 궤적으로 전달되지 않는다는 것이다. 근거는 <a href="{{ '/posts/camera-fallback-eight-images/' | relative_url }}">후속 글</a>에 정리했다. 아래 본문은 당시 기록 그대로 둔다.
+</div>
+
 로봇 앞에 빨강·초록·파랑 마커 세 개를 세우고 지시문을 넣었다.
 
 ```
