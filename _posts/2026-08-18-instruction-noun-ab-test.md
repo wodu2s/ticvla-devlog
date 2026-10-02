@@ -7,7 +7,7 @@ tags: [제로샷, A/B테스트, instruction, ActionExpert]
 
 <div class="callout">
 <span class="label">정정</span>
-이 글의 <strong>6초·9초 시점 값은 모델의 예측 지평 밖이다.</strong> 예측 지평은 30 스텝 = 3초로 고정이라는 걸 당시에는 몰랐다. 6초·9초는 모델이 실제로 예측한 값이 아니라 창을 이어붙여 읽은 값일 가능성이 크다. 자세한 내용은 <a href="{{ '/posts/three-second-baseline-speed-scale/' | relative_url }}">3초 기준선 글</a>에 있다. 아래 본문은 당시 기록 그대로 둔다.
+이 글의 <strong>6초·9초 시점 값은 모델의 예측 지평 밖이다.</strong> 예측 지평은 30 스텝 = 3초로 고정이라는 걸 당시에는 몰랐다. 6초·9초는 모델이 실제로 예측한 값이 아니라 창을 이어붙여 읽은 값일 가능성이 크다. <a href="{{ '/posts/three-second-baseline-speed-scale/' | relative_url }}">3초 기준선 글</a>에서 3초 구간으로 다시 측정했다. 아래 본문은 당시 기록 그대로 둔다.
 </div>
 
 지금까지의 시연 시나리오는 "앞의 사람을 피해서 복도 끝까지"였다. 다음 목표는 한 걸음 더 나간 것이다 — **"저 물체까지 가라."** 회피가 아니라 접근이다.
