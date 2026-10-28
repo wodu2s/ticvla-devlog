@@ -3,6 +3,7 @@ title: "진짜 &lt;think&gt;를 넣었더니 ReAct가 한 번도 움직이지 �
 date: 2026-10-26 18:00:00 +0900
 summary: "보이는 쿨러는 말하지 않고, 없는 회색 통은 있다고 했다"
 tags: [ReAct, VLM, grounding, 환각, 관측]
+category: ai-agent
 ---
 
 로봇을 움직이지 않은 채 원격으로 실제 TIC-VLA `<think>`를 처음 뽑고, ReAct 루프에 live로 연결했다.

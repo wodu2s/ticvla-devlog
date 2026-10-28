@@ -1,0 +1,18 @@
+# 홈 화면 분류 순서. 글은 머리말의 category 값(id)으로 묶인다.
+- id: paper
+  name: paper
+- id: inference
+  name: inference
+- id: dataset
+  name: Dataset
+  page: /dataset/
+  page_title: 데이터셋 구성 — GoToColorMarker-v1
+- id: train
+  name: train
+- id: robot-control
+  name: robot control
+- id: ai-agent
+  name: AI Agent
+- id: log
+  name: 주간일지
+  link: /log/

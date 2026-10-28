@@ -3,6 +3,7 @@ title: "느린 루프와 빠른 루프 — 11.9ms의 발견"
 date: 2026-08-06 17:00:00 +0900
 summary: "Action Expert 단독 실행은 11.9ms였다. 14초짜리 모델로 1Hz 제어를 돌릴 수 있게 된 순간."
 tags: [지연시간, 아키텍처, KV캐시]
+category: inference
 ---
 
 지난 글의 가설을 측정으로 확인했다. `predict()`를 VLM 생성 구간과 Action Expert 구간으로 쪼개 각각 시간을 쟀다.

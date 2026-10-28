@@ -97,6 +97,32 @@ body{
 .entry .date{font-size:.78rem;color:var(--ink-faint);font-variant-numeric:tabular-nums}
 .entry p{margin:.25rem 0 0;color:var(--ink-soft);font-size:.94rem}
 
+/* 홈 분류 목록 — 노션 토글처럼 접고 펼친다 */
+.toc{list-style:none;padding:0;margin:0}
+.toc-group{border-bottom:1px solid var(--line)}
+.toc-group:last-child{border-bottom:0}
+.toc-row{
+  display:flex;align-items:baseline;gap:.6rem;
+  padding:.85rem 0;cursor:pointer;list-style:none;
+  text-decoration:none;color:var(--ink);
+}
+.toc-row::-webkit-details-marker{display:none}
+.toc-row::before{
+  content:"▶";font-size:.62rem;color:var(--ink-faint);
+  width:.9rem;flex:none;transition:transform .15s;
+}
+details[open] > .toc-row::before{transform:rotate(90deg)}
+a.toc-row::before{content:"→";font-size:.8rem}
+.toc-name{font-weight:600;font-size:1.02rem}
+.toc-row:hover .toc-name{color:var(--accent)}
+.toc-count{margin-left:auto;font-size:.78rem;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.toc-items{list-style:none;margin:0 0 .9rem;padding:0 0 0 1.5rem}
+.toc-items li{display:flex;align-items:baseline;gap:.8rem;padding:.3rem 0;font-size:.94rem}
+.toc-items a{color:var(--ink-soft);text-decoration:none;line-height:1.45}
+.toc-items a:hover{color:var(--accent)}
+.toc-items .date{margin-left:auto;flex:none;font-size:.76rem;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.toc-empty{color:var(--ink-faint)}
+
 .tags{margin:.55rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem}
 .tag{
   font-size:.72rem;color:var(--ink-faint);

@@ -3,6 +3,7 @@ title: "색을 못 본다 — RGB 버그인 줄 알았다"
 date: 2026-09-17 17:00:00 +0900
 summary: "빨강·초록·파랑 마커를 구분하지 못했다. 채널 스왑을 의심해 세 곳을 다 뒤졌지만 전부 정상이었고, 원인은 다른 데 있었다."
 tags: [VLM, grounding, 디버깅]
+category: inference
 ---
 
 <div class="callout">

@@ -3,6 +3,7 @@ title: "지시문의 명사 하나를 바꿨더니 모델의 말이 뒤집혔다
 date: 2026-08-18 16:00:00 +0900
 summary: "\"저기로 가라\"를 학습시키기 전에, 제로샷이 지금 무엇을 하는지부터 재봤다. 텍스트와 궤적이 서로 다른 방향을 가리켰다."
 tags: [제로샷, A/B테스트, instruction, ActionExpert]
+category: inference
 ---
 
 <div class="callout">

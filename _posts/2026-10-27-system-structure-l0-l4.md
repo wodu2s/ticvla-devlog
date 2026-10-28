@@ -3,6 +3,7 @@ title: "구조부터 정했다 — ReAct는 멈춰서 판단하고 TIC-VLA는 �
 date: 2026-10-27 18:00:00 +0900
 summary: "L0~L4 층 정의, marker·LiDAR 정지·VLM LoRA 결정, 수집 에피소드 4종"
 tags: [아키텍처, ReAct, LiDAR, 데이터수집, 심부름]
+category: ai-agent
 ---
 
 261026 결과를 바탕으로 ReAct와 TIC-VLA의 역할을 L0~L4로 나눠 정의하고, 목표 단어·도착 판정·심부름 입력·수집 방식을 결정했다.
