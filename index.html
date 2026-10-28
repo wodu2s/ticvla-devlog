@@ -17,12 +17,12 @@ layout: default
   </ul>
 
   <div class="status">
-    <strong>현재 상태 — 심부름 태스크 1차 학습 완료</strong>
+    <strong>현재 상태 — 시스템 구조(L0~L4) 확정, 관측 품질이 블로커</strong>
     <ul>
-      <li>피벗 완료: 보행자 회피 데모 → 심부름 태스크</li>
-      <li>데이터셋 72 에피소드 수집 완료 (3배치 × 3색 × 8)</li>
-      <li>1차 학습(Action Expert only) 완료 — 궤적은 맞고 색은 틀림</li>
-      <li>다음: 색 조건이 궤적에 실리도록 손실/프롬프트 재설계</li>
+      <li>ReAct live 연동 경로 동작 — 그러나 실제 &lt;think&gt;가 장면을 서술하지 못해 goto 0회</li>
+      <li>구조 결정: ReAct(L3)는 멈춰서 판단, TIC-VLA(L1)는 움직이며 실행 · 도착 정지는 LiDAR + 카메라 확인</li>
+      <li>미구현: L2 goto 주행 연결, L4 심부름 관리자, 터치 UI, LiDAR 연동, VLM LoRA</li>
+      <li>다음: 관측 방식 비교로 기준선 확보 → 신규 4종 에피소드 수집 → VLM LoRA</li>
     </ul>
   </div>
 </section>
