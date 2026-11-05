@@ -1,6 +1,6 @@
 ---
 title: "goto가 2 m를 갔다 — 원인보다 멈출 장치를 먼저 건다"
-date: 2026-11-05 18:00:00 +0900
+date: 2026-11-05 15:00:00 +0900
 summary: "goto 1회 전진 상한(max_goto_forward_m 1.0) + 어댑터 호출 전 action_start 선기록 작업 지시 작성"
 tags: [실차주행, 안전장치, ReAct, goto, 로깅]
 category: robot-control
